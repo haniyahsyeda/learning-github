@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+:root {
+    --primary: 	#48E2B7;
+    --dark: #21252f;
+    --body: #888;
+    --white: #ffffff;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: Dosis;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+h1,h2,h3,h4,h5,h6,
+.display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 1000;
+    font-style: italic;
+    font-family: Dosis;
+    color: #ffff;
+}
+
+@media only screen and (max-width: 250px) {
+    .logo{
+        font-size: 70% !important;
+    }
+    
+}
+
+.my-navbar-options{
+    color: #fff !important;
+}
+
+
+@media only screen and (max-width: 250px) {
+    .my-navbar-toggle{
+        height: 30% !important;
+        width: 30%;
+    }
+    
+}
+
+.my-brand{
+    font-weight: 100;
+    font-style: normal;
+    color: var(--primary);
+    font-family: Dosis;
+    font-size: 30px;
+}
+
+.navbar .nav-link {
+    font-size: 20px;
+    font-weight: 400;
+    color: #15171d;
+    font-family: Dosis;
+}
+
+.navbar .nav-link:hover{
+    font-weight: bold;
+    color: #48E2B7 !important;
+    transition: 0.5s;
+}
+
+.navbar .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.btn {
+    padding: 14px 18px;
+    border-width: 2px;
+    border-radius: 0;
+}
+
+.my-contact-button{
+    background-color: var(--primary) !important;
+    font-family: Dosis;
+    margin-bottom: 20px;
+    font-size: 25px !important;
+}
+
+.my-product-img{
+    width: 60px !important;
+    display: inline-block;
+}
+
+button p{
+    display: inline-block;
+    font-size: 20px;
+}
+
+.my-product-button{
+    border: 1px #15171d solid;
+    width: 200px;
+}
+
+.my-product-heart{
+    width: 30px !important;
+    height: 30px !important;
+    margin-left: 260px;
+}
+
+.hero {
+    background-image: url(./images/nav-img2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, 0.8);
+    z-index: -1;
+}
+
+.products-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+.about-section{
+    background-color: white;
+    margin-top: 50px !important;
+}
+
+  .pcard {
+    /* background-color: red  !important ; */
+    width: 300px;
+    height: 300px;
+    background: #000;
+    margin-top: 50px;
+    /* cursor: pointer; */
+  }
+  .pcard .image {
+    width: 100%;
+    height: 100% !important;
+    overflow: hidden;
+  }
+  .pcard .image img {
+    width: 100%;
+    transition: .5s;
+  }
+  .pcard:hover .image img {
+    opacity: .5;
+    transform: translateX(30%);
+  }
+  .pcard .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: #212529;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+  }
+  .fa-search-circle{
+    color: white !important;
+  }
+  .pcard:hover .details {
+    
+    transform: perspective(2000px) rotateY(0deg);
+  }
+  .pcard .details .center {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .pcard .details .center h1 {
+    margin: 0;
+    padding: 0;
+    color: #48E2B7 !important;
+    line-height: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .pcard .details .center h1 span {
+    font-size: 14px;
+    color: #262626;
+  }
+  .pcard .details .center p {
+    margin: 10px 0;
+    padding: 0;
+    color: #262626;
+  }
+  .pcard .details .center ul {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+  }
+  .pcard .details .center ul li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+  }
+  .pcard .details .center ul li a {
+    display: block;
+    background: #262626;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transform: .5s;
+  }
+  .pcard .details .center ul li a:hover {
+    background: #48E2B7;
+  } 
+  
+  
+  /* gallery */
+
+  .iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 32px;
+    border-radius: 100px;
+    flex: none;
+}
+
+.iconbox img{
+    color: #fff;
+}
+
+.iconbox-h5{
+    font-family: Dosis;
+    font-weight: 1000 !important;
+}
+
+.iconbox img{
+    width: 40px;
+    height: 40px;
+}
+
+.service::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+
+.service:hover .iconbox {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.service:hover h5,
+.service:hover p {
+    color: var(--white);;
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.card-h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: Dosis;
+}
+
+.col-img {
+    background-image: url(./images/about-img.webp);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+}
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 20, 51, 0.8);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.project img {
+    transition: all 0.4s ease;   
+}
+
+.project:hover .overlay{
+    opacity: 1;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+
+.pricing i {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.pricing ul li {
+    margin-top: 8px;
+}
+
+.team-member img {
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+.social-icons a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--primary);
+    border-radius: 2px solid var(--primary);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-left: 5px;
+    transition: all 0.4s ease;
+    border: 2px solid var(--primary);
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    background-color: transparent;
+    border-color: var(--primarys);
+}
+
+.contact-heading{
+    color: rgb(47, 46, 46);
+    margin-top: 70px;
+    font-family: Dosis;
+}
+
+.contact-p{
+    color: rgb(47, 46, 46);
+    font-family: Dosis;
+    font-size: 20px;
+}
+
+form input.form-control {
+    height: 56px;
+}
+
+form .form-control {
+    border: transparent;
+    border-radius: 0;
+    border-bottom: 1px rgb(47, 46, 46) solid;
+    color: rgb(47, 46, 46) !important;
+}
+
+.form-control:focus {
+    border-color: inherit !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 2px rgb(47, 46, 46) solid !important;
+    transition: 0.5s;
+  }  
+
+.form-control::placeholder{
+    font-family: Dosis;
+    color: rgb(47, 46, 46);
+    font-size: 20px;
+}
+
+.footer-div1{
+    background-color: rgb(44, 44, 44);
+    color: #ffffff;
+    padding-top: 50px;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    padding-bottom: 100px;
+    font-family: Dosis;
+}
+
+.footer-div-h4{
+    color: #fff;
+    font-family: Dosis;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 210px){
+    .footer-inputBar{
+        width: 135px;
+    }
+}
+
+.my-footer-img{
+    height: 35px !important;
+    width: 35px !important;
+    margin-left: 10px;
+}
+
+.copyright-bar{
+    background-color: var(--primary);
+    height: 40px;
+    color: rgb(47, 46, 46);
+    font-weight: 900;
+}
+
+.copyright-bar p{
+    text-align: center;
+    font-family: Dosis;
+}
